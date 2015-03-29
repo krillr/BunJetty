@@ -1,0 +1,4 @@
+name: BunJetty
+main: io.quintus.bunjetty.BunJetty
+version: 1.0-SNAPSHOT
+author: __kazu__
