@@ -49,7 +49,7 @@ public class BunJetty extends Plugin {
             public void run() {
                 BunJetty plugin = BunJetty.getPlugin();
                 Server server = new Server();
-                ServerConnector serverConnector = new ServerConnector(server, plugin.getExecutorService(), null, null, -1, -1, new HttpConnectionFactory());
+                ServerConnector serverConnector = new ServerConnector(server, new HttpConnectionFactory());
                 serverConnector.setIdleTimeout(TimeUnit.HOURS.toMillis(1));
                 serverConnector.setSoLingerTime(-1);
                 serverConnector.setHost(plugin.getConfig().getString("host", "127.0.0.1"));
